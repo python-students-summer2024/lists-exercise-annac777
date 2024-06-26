@@ -11,9 +11,9 @@ def assess_mood():
 
     if os.path.exists(file_path):
         file = open(file_path, 'r')
-        entries_today = [line for line in file if line.startswith(date_today)]
+        attempted = [line for line in file if line.startswith(date_today)]
         
-        if entries_today:
+        if attempted:
             print("Sorry, you have already entered your mood today.")
             return
 
